@@ -24,7 +24,7 @@
 
 
 
-#define always_inline __attribute((always_inline));
+#define always_inline __attribute__((always_inline)) inline
 
 
 #define power(x, y)                       \
