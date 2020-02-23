@@ -1,5 +1,6 @@
 Erebus.bin: Erebus.c
-	gcc -pie -fomit-frame-pointer -o Erebus.bin Erebus.c
+	gcc -fPIC -pie -fomit-frame-pointer -fstack-protector -Wl,-z,relro,-z,now \
+		-Wl,-z,separate-code -o Erebus.bin Erebus.c
 
 victim.bin: victim.c
 	gcc -o victim.bin victim.c
